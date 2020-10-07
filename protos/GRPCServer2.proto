@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+import "google/api/annotations.proto";
+import "validate/validate.proto";
+
+package GPRCServer2;
+
+// service definition
+service GPRCServer {
+    rpc connectGRPC(firstRequest) returns (firstResponse){
+        option(google.api.http) = {
+            get: "/api/connect/{name}",
+        };
+    };
+    rpc disconnectGRPC(lastRequest) returns (lastResponse){
+        option(google.api.http) = {
+            get: "/api/disconnect/{name}",
+        };
+    };
+}
+
+message firstRequest {
+    string name = 1 [(validate.rules).string.len = 3];
+}
+
+message firstResponse {
+    string msg = 1;
+}
+
+message lastRequest {
+    string name = 1 [(validate.rules).string.len = 3];
+}
+
+message lastResponse {
+    string msg = 1;
+}

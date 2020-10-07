@@ -6,7 +6,7 @@ import (
 	"log"
 	"time"
 
-	GRPCServer "github.com/ssoyyoung.p/grpc-ex2/gen/go/GRPCServer"
+	GRPCServer "github.com/ssoyyoung.p/grpc-golang-python/gen/go/GRPCServer"
 	"google.golang.org/grpc"
 )
 
