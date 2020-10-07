@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package GPRCServer;
+
+// service definition
+service GPRCServer {
+    rpc connectGRPC(firstRequest) returns (firstResponse);
+    rpc disconnectGRPC(lastRequest) returns (lastResponse);
+}
+
+// request message
+message firstRequest {
+    string name = 1;
+}
+
+// response message
+message firstResponse {
+    string msg = 1;
+}
+
+// request message
+message lastRequest {
+    string name = 1;
+}
+
+// response message
+message lastResponse {
+    string msg = 1;
+}
