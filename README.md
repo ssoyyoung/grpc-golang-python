@@ -33,7 +33,7 @@ protoc -I/usr/local/include -I. \
                 -I${GOPATH}/src \
                 -I${GOPATH}/src/github.com/grpc-ecosystem/grpc-gateway/third_party/googleapis \
                 -I${GOPATH}/src/github.com/envoyproxy/protoc-gen-validate \
-                --go-grpc_out=./gen2/go \     
+                --go_out=plugins=grpc:./gen2/go \     
                 protos/GRPCServer2.proto
 ```               
 
@@ -53,7 +53,7 @@ protoc -I/usr/local/include -I. \
                 -I${GOPATH}/src \
                 -I${GOPATH}/src/github.com/grpc-ecosystem/grpc-gateway/third_party/googleapis \
                 -I${GOPATH}/src/github.com/envoyproxy/protoc-gen-validate \
-                --go-grpc_out=./gen2/go \     
+                --grpc-gateway_out=./gen2/go \     
                 protos/GRPCServer2.proto
 ```
 
