@@ -16,7 +16,7 @@ import (
 
 type server struct {
 	wg sync.WaitGroup
-	//GRPCServer.UnimplementedGPRCServerServer
+	GRPCServer.UnimplementedGPRCServerServer
 }
 
 // New creates new server greeter
