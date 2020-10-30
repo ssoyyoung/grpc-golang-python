@@ -19,7 +19,7 @@ type server struct {
 	GRPCServer.UnimplementedGPRCServerServer
 }
 
-// New creates new server greeter
+// New func
 func New() *server {
 	return &server{}
 }
